@@ -1,0 +1,10 @@
+{
+  "record_kind": "notebook_input_notes_not_native_config",
+  "pdb_filename": "/path/to/inputs/receptor.pdb",
+  "chain": "A",
+  "binder_len": 15,
+  "hotspot": null,
+  "data_dir": "/path/to/models/alphafold",
+  "cyclic_offset_type": 2,
+  "output_pdb": "/path/to/outputs/afcycdesign/complex.pdb"
+}

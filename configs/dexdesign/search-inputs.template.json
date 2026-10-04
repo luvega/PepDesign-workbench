@@ -1,0 +1,14 @@
+{
+  "record_kind": "search_preparation_notes_not_native_config",
+  "prepared_complex_directory": "/path/to/inputs/prepared_complexes",
+  "osprey_engine": "/path/to/osprey3/bin/osprey3",
+  "receptor_chain": "R",
+  "peptide_chain": "P",
+  "expected_receptor_chirality": "L",
+  "expected_peptide_chirality": "D",
+  "threads": null,
+  "memory_gib": null,
+  "walltime_seconds": null,
+  "flexible_positions": [],
+  "chemical_preparation_notes": ""
+}

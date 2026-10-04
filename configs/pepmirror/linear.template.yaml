@@ -1,0 +1,15 @@
+dataset:
+  pdb_paths:
+    - /path/to/inputs/complex.pdb
+  tgt_chains:
+    - R
+  lig_chains:
+    - L
+templates:
+  - class: LinearPeptide
+    size_min: 15
+    size_max: 16
+batch_size: 1
+n_samples: 1
+axial_type: commutator
+axial_position: Both

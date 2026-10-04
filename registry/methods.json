@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "reference_kind": "native_interface_configuration",
+  "reviewed_on": "2026-10-04",
+  "reference_note": "Source references identify documentation interfaces; model assets and dependencies have separate terms.",
+  "methods": [
+    {
+      "id": "pepmlm",
+      "name": "PepMLM",
+      "documentation": "docs/methods/pepmlm.md",
+      "interface": "python_function",
+      "code_license_reference": "not_provided_at_reference",
+      "sources": [
+        {
+          "url": "https://github.com/programmablebio/pepmlm",
+          "commit": "3169c4920f8c383948e0a5d3a7c8f87e5e7d2436"
+        }
+      ]
+    },
+    {
+      "id": "diffpepbuilder",
+      "name": "DiffPepBuilder",
+      "documentation": "docs/methods/diffpepbuilder.md",
+      "interface": "hydra_cli",
+      "code_license_reference": "MIT",
+      "sources": [
+        {
+          "url": "https://github.com/YuzheWangPKU/DiffPepBuilder",
+          "commit": "c19eb4f0cd2419d3bcc116184c0868243b6c4169"
+        }
+      ]
+    },
+    {
+      "id": "pepglad",
+      "name": "PepGLAD",
+      "documentation": "docs/methods/pepglad.md",
+      "interface": "python_module_cli",
+      "code_license_reference": "MIT",
+      "sources": [
+        {
+          "url": "https://github.com/THUNLP-MT/PepGLAD",
+          "commit": "bad015ca50c312a89482adb5220c3d907f13df5c"
+        }
+      ]
+    },
+    {
+      "id": "mirror-peptidizer",
+      "name": "Mirror-Peptidizer",
+      "documentation": "docs/methods/mirror-peptidizer.md",
+      "interface": "python_cli",
+      "code_license_reference": "Apache-2.0",
+      "sources": [
+        {
+          "url": "https://github.com/dahuilangda/Mirror-Peptidizer",
+          "commit": "a517c8fb6711649284116135c2fe2c7e1719870b"
+        }
+      ]
+    },
+    {
+      "id": "pepmirror",
+      "name": "PepMirror",
+      "documentation": "docs/methods/pepmirror.md",
+      "interface": "python_module_cli",
+      "code_license_reference": "MIT",
+      "sources": [
+        {
+          "url": "https://github.com/YZY010418/PepMirror",
+          "commit": "41cb31f3974d91e1a2ca88f0db060405833e4a9c"
+        }
+      ]
+    },
+    {
+      "id": "afcycdesign",
+      "name": "AfCycDesign / ColabDesign cyclic peptide",
+      "documentation": "docs/methods/afcycdesign.md",
+      "interface": "notebook_python_api",
+      "code_license_reference": "Beer-Ware Revision 42",
+      "sources": [
+        {
+          "url": "https://github.com/sokrypton/ColabDesign",
+          "commit": "e31a56fe1d9b4de25c8697f3a28b75892941cc72"
+        }
+      ]
+    },
+    {
+      "id": "dexdesign",
+      "name": "DexDesign / OSPREY3",
+      "documentation": "docs/methods/dexdesign.md",
+      "interface": "python_jvm_search",
+      "code_license_reference": "GPL-2.0",
+      "sources": [
+        {
+          "url": "https://github.com/donaldlab/OSPREY3",
+          "commit": "3d53244851f0388db9e01b288bbd330145935aa7"
+        }
+      ]
+    },
+    {
+      "id": "rfdiffusion-proteinmpnn",
+      "name": "RFdiffusion + ProteinMPNN",
+      "documentation": "docs/methods/rfdiffusion-proteinmpnn.md",
+      "interface": "two_stage_cli",
+      "code_license_reference": "BSD / MIT",
+      "sources": [
+        {
+          "url": "https://github.com/RosettaCommons/RFdiffusion",
+          "commit": "2d0c003df46b9db41d119321f15403dec3716cd9"
+        },
+        {
+          "url": "https://github.com/dauparas/ProteinMPNN",
+          "commit": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57"
+        }
+      ]
+    },
+    {
+      "id": "bindcraft",
+      "name": "BindCraft",
+      "documentation": "docs/methods/bindcraft.md",
+      "interface": "python_cli",
+      "code_license_reference": "MIT",
+      "sources": [
+        {
+          "url": "https://github.com/martinpacesa/BindCraft",
+          "commit": "b971db42ba6e091afab63ccb30ae02215150a990"
+        }
+      ]
+    },
+    {
+      "id": "bindcraft2",
+      "name": "BindCraft2",
+      "documentation": "docs/methods/bindcraft2.md",
+      "interface": "campaign_cli",
+      "code_license_reference": "Source-Available Hosting-Restricted",
+      "sources": [
+        {
+          "url": "https://github.com/PacesaLab/BindCraft2",
+          "commit": "a8d0f2002df373842b86a3c20c5a060c5cfdf980"
+        }
+      ]
+    }
+  ]
+}

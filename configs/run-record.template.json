@@ -1,0 +1,15 @@
+{
+  "record_kind": "user_run_notes",
+  "method_id": "",
+  "source_commits": {},
+  "environment_description": "",
+  "input_files_sha256": {},
+  "model_files_sha256": {},
+  "native_command": [],
+  "output_directory": "",
+  "runtime_status": "not_started",
+  "native_filter_status": "not_evaluated",
+  "output_level": "not_determined",
+  "chirality_summary": {},
+  "geometry_notes": []
+}

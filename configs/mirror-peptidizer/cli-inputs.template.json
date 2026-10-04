@@ -1,0 +1,11 @@
+{
+  "record_kind": "cli_input_notes_not_native_config",
+  "receptor": "/path/to/inputs/receptor.pdb",
+  "output": "/path/to/outputs/mirror-peptidizer",
+  "len_binder": 15,
+  "num_poses": 1,
+  "num_seqs_per_pose": 1,
+  "temperature": 0.1,
+  "gpu": 0,
+  "bo_rounds": 0
+}

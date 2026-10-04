@@ -1,0 +1,19 @@
+{
+  "record_kind": "two_stage_input_notes_not_native_config",
+  "rfdiffusion": {
+    "input_pdb": "/path/to/inputs/receptor.pdb",
+    "output_prefix": "/path/to/outputs/rfdiffusion/binder",
+    "contig": "",
+    "hotspots": [],
+    "num_designs": 1
+  },
+  "proteinmpnn": {
+    "pdb_path": "/path/to/outputs/rfdiffusion/generated.pdb",
+    "pdb_path_chains": "",
+    "out_folder": "/path/to/outputs/proteinmpnn",
+    "num_seq_per_target": 1,
+    "sampling_temp": 0.1,
+    "seed": 42,
+    "model_name": "v_48_020"
+  }
+}

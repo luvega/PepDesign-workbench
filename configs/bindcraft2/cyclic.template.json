@@ -1,0 +1,15 @@
+{
+  "modality": "cyclic_peptide",
+  "targets": [
+    {"name": "user_target", "target_path": "/path/to/inputs/receptor.pdb", "chains": "A", "hotspots": ""}
+  ],
+  "binder_lengths": [7, 16],
+  "campaign_seed": 42,
+  "number_of_final_designs": 1,
+  "max_trajectories": 1,
+  "resume": false,
+  "auto_multi_gpu": false,
+  "design_workers": 1,
+  "gpu_ids": [0],
+  "project_folder": "/path/to/outputs/bindcraft2_cyclic"
+}
