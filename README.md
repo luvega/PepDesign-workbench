@@ -68,6 +68,6 @@ python -m unittest discover -s tests -v
 
 ## 来源与许可
 
-方法均归原作者所有，请按[来源登记](registry/methods.json)访问官方项目。各方法的源码、权重与依赖分别适用其官方条款；BindCraft2 的许可独立于 BindCraft。详见[许可说明](docs/licenses.md)。
+本工作台自编内容采用 [MIT License](LICENSE)。方法均归原作者所有，请按[来源登记](registry/methods.json)访问官方项目。各方法的源码、权重与依赖分别适用其官方条款；BindCraft2 的许可独立于 BindCraft。详见[许可说明](docs/licenses.md)。
 
 两张说明图通过 Image Gen 生成，分子图形为流程插画。维护方式见[贡献指南](CONTRIBUTING.md)。

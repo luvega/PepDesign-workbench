@@ -33,4 +33,4 @@ python -m unittest discover -s tests -v
 
 These checks use only the Python standard library. They validate documentation, configuration and publication structure without running a design model.
 
-See [setup and weights](docs/environments.md), [native templates](configs/README.md), [output checks](docs/quality-checks.md) and [licenses](docs/licenses.md). Upstream software and model licenses remain separate.
+Workbench-authored documentation, templates and checks use the [MIT License](LICENSE). See [setup and weights](docs/environments.md), [native templates](configs/README.md), [output checks](docs/quality-checks.md) and [licensing boundaries](docs/licenses.md). Upstream software, model assets and dependencies retain their separate licenses.
