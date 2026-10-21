@@ -2,7 +2,7 @@
 
 **多方法、多形态多肽设计工作台。** 从输入准备、独立环境与模型资产配置，到原生设计和产物检查，为不同设计方法提供清晰的使用入口。
 
-[开始使用](docs/getting-started.md) · [方法目录](docs/methods/README.md) · [环境与权重](docs/environments.md) · [输入与输出](docs/inputs-outputs.md) · [English](README.en.md)
+[本科生教学样版](docs/teaching/README.md) · [开始使用](docs/getting-started.md) · [方法目录](docs/methods/README.md) · [环境与权重](docs/environments.md) · [输入与输出](docs/inputs-outputs.md) · [English](README.en.md)
 
 ![PepDesign Workbench：输入、方法配置、原生设计、产物与质量检查](docs/assets/platform-overview.png)
 
@@ -14,6 +14,12 @@
 - **产物分层检查**：区分序列、骨架和全原子复合物，记录手性、连通性与几何信息。
 
 当前工作台提供配置与文档入口，计算由各方法的原生软件完成。模板使用用户自备输入；方法源码和模型资产在工作台之外安装。
+
+## 本科生教学样版
+
+[教学导航](docs/teaching/README.md)收录十种方法的样版，学生按项目选 1—2 种。每例先完整讲解，再安排三道补全练习和两项独立任务。配套[研究任务卡](docs/teaching/common/research-task-card.md)、[个人项目迁移模板](docs/teaching/common/project-transfer.md)、[AI 辅助提示词](docs/teaching/common/ai-prompts.md)和[教师答案](docs/teaching/teacher-guide.md)，供学生练习修改参数、检查产物和决定下一步。
+
+2026-10-21 完成教材编写，尚未运行模型。服务器环境和十种方法的运行结果仍待逐项验收。案例已标明哪些来自上游、哪些是合成教学记录；后续实跑结果另行补入。任务卡用于说明研究计划，不能直接作为统一程序配置或 Baker CLI 请求。[Baker skill](https://github.com/luvega/design_dock_skills) 可辅助学生明确目标、审阅证据和决定下一步。
 
 ## 按任务选择方法
 

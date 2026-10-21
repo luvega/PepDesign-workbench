@@ -38,7 +38,7 @@ def publishable_paths(root: Path) -> list[str]:
         )
         return sorted(set(x.decode("utf-8") for x in result.stdout.split(b"\0") if x))
     return sorted(
-        str(p.relative_to(root)) for p in root.rglob("*")
+        p.relative_to(root).as_posix() for p in root.rglob("*")
         if (p.is_file() or p.is_symlink()) and "__pycache__" not in p.parts
     )
 
@@ -57,7 +57,7 @@ def check_links(root: Path, paths: set[str]) -> list[str]:
                 continue
             destination = (path.parent / unquote(parsed.path)).resolve()
             try:
-                destination_relative = str(destination.relative_to(root.resolve()))
+                destination_relative = destination.relative_to(root.resolve()).as_posix()
             except ValueError:
                 errors.append(f"link leaves repository: {relative}: {target}")
                 continue

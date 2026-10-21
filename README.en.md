@@ -1,5 +1,7 @@
 # PepDesign Workbench
 
+The [Chinese undergraduate case library](docs/teaching/README.md) covers ten methods. Students choose one or two and work through examples, completion exercises and independent projects, with shared task cards and teacher answers. The documents are written; local model runs and server checks are still pending. Synthetic exercise records are labelled and kept separate from upstream examples and future local results.
+
 A configuration and documentation workbench for peptide design: choose a method, prepare its environment and model assets, run its native workflow, and inspect the outputs.
 
 [中文主页](README.md) · [Getting started](docs/getting-started.md) · [Method directory](docs/methods/README.md)

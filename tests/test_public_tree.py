@@ -18,7 +18,7 @@ class PublicTreeChecks(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name) / "workbench"
         self.root.mkdir()
-        for name in json.loads((ROOT / "registry/public_files.json").read_text())["files"]:
+        for name in json.loads((ROOT / "registry/public_files.json").read_text(encoding="utf-8"))["files"]:
             target = self.root / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / name, target)
@@ -33,44 +33,49 @@ class PublicTreeChecks(unittest.TestCase):
 
     def test_link_to_unpublished_input_is_rejected(self):
         p = self.root / "README.md"
-        p.write_text(p.read_text() + "\n[Input](inputs/structure.pdb)\n")
+        p.write_text(p.read_text(encoding="utf-8") + "\n[Input](inputs/structure.pdb)\n", encoding="utf-8")
         self.assertTrue(any("link target not published" in e for e in checker.check_tree(self.root)))
 
     def test_symlink_is_rejected(self):
         path = self.root / "README.en.md"
         path.unlink()
-        path.symlink_to(self.root / "README.md")
+        try:
+            path.symlink_to(self.root / "README.md")
+        except OSError as exc:
+            if getattr(exc, "winerror", None) == 1314:
+                self.skipTest("Windows account cannot create symbolic links")
+            raise
         self.assertTrue(any("unsafe public path" in e for e in checker.check_tree(self.root)))
 
     def test_bindcraft2_must_stay_separate(self):
         path = self.root / "registry/methods.json"
-        data = json.loads(path.read_text())
+        data = json.loads(path.read_text(encoding="utf-8"))
         original = next(m for m in data["methods"] if m["id"] == "bindcraft")
         newer = next(m for m in data["methods"] if m["id"] == "bindcraft2")
         newer["sources"] = original["sources"]
         newer["documentation"] = original["documentation"]
-        path.write_text(json.dumps(data))
+        path.write_text(json.dumps(data), encoding="utf-8")
         self.assertTrue(any("separate sources" in e for e in checker.check_tree(self.root)))
 
     def test_bindcraft_fields_do_not_enter_campaign(self):
         path = self.root / "configs/bindcraft2/linear.template.json"
-        data = json.loads(path.read_text())
+        data = json.loads(path.read_text(encoding="utf-8"))
         data["starting_pdb"] = "/path/to/inputs/receptor.pdb"
-        path.write_text(json.dumps(data))
+        path.write_text(json.dumps(data), encoding="utf-8")
         self.assertTrue(any("mixed into" in e for e in checker.check_tree(self.root)))
 
     def test_missing_source_pin_is_rejected(self):
         path = self.root / "registry/methods.json"
-        data = json.loads(path.read_text())
+        data = json.loads(path.read_text(encoding="utf-8"))
         data["methods"][0]["sources"][0]["commit"] = "main"
-        path.write_text(json.dumps(data))
+        path.write_text(json.dumps(data), encoding="utf-8")
         self.assertTrue(any("full commit" in e for e in checker.check_tree(self.root)))
 
     def test_path_escape_in_allowlist_is_rejected(self):
         path = self.root / "registry/public_files.json"
-        data = json.loads(path.read_text())
+        data = json.loads(path.read_text(encoding="utf-8"))
         data["files"].append("../private.json")
-        path.write_text(json.dumps(data))
+        path.write_text(json.dumps(data), encoding="utf-8")
         self.assertEqual(checker.check_tree(self.root), ["invalid public file allowlist"])
 
 
